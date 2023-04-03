@@ -1,0 +1,1 @@
+This directory contains the answers to the questions in Sheet one. Every directory is dedicated to answering a question. A bash script entitled ```run.sh``` is provided to run the code and generate the output.
