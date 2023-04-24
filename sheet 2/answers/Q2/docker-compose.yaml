@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  mysql_db:
+    image: mysql:latest
+    restart: always
+    ports:
+      - 1234:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: campus
+    volumes:
+      - ./db:/var/lib/mysql
+    networks:
+      - campus-network
+
+  mysql_flask:
+    build: server-docker-file/.
+    restart: always
+    ports:
+      - "12345:5000"
+    depends_on:
+      - mysql_db
+    environment:
+      MYSQL_HOST: db_mysql
+      MYSQL_PORT: 3306
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: campus
+    networks:
+      - campus-network
+
+networks:
+  campus-network:
+    driver: bridge

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% comment %} This HTML template displays a table of students with their ID, name, and age. {% endcomment %}
+<html>
+<head>
+	<title>Students</title>
+</head>
+<body>
+	<h1>Students</h1>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		{% for student in students %}
+		<tr>
+			<td>{{ student[0] }}</td>
+			<td>{{ student[1] }}</td>
+			<td>{{ student[2] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
