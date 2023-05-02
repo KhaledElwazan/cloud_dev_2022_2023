@@ -1,0 +1,73 @@
+\documentclass{article}
+
+\usepackage{xcolor}
+
+\title{ Dockerizing a RESTful API for Managing Person Objects}
+\author{}
+
+\date{\textbf{\textcolor{red}{Deadline 2-5-2023, 23:45}}}
+
+\begin{document}
+\maketitle
+
+\section*{Main Requirements}
+
+You have been tasked with creating a Docker image that hosts a RESTful API for managing person objects. The API should allow users to perform CRUD (Create, Read, Update, Delete) operations on person objects.
+Each person object should have the following attributes:
+
+\begin{itemize}
+	\item \texttt{id}: A unique identifier for the person object.
+	\item \texttt{name}: The name of the person.
+	\item \texttt{age}: The age of the person.
+	\item \texttt{gender}: The gender of the person.
+	\item \texttt{email}: The email address of the person.
+\end{itemize}
+
+
+\section*{API Specification}
+
+The RESTful API should have the following endpoints:
+
+\begin{itemize}
+	\item \texttt{GET /persons}: Retrieve a list of all person objects.
+	\item \texttt{POST /persons}: Create a new person object.
+	\item \texttt{GET /persons/\{id\}}: Retrieve a specific person object by its ID.
+	\item \texttt{PUT /persons/\{id\}}: Update a specific person object by its ID.
+	\item \texttt{DELETE /persons/\{id\}}: Delete a specific person object by its ID.
+\end{itemize}
+
+\section*{Docker Image Specification}
+
+You should write a Dockerfile that builds a Docker image containing the RESTful API code and its dependencies. You should then run a container from this Docker image to verify that the API is working correctly.
+% To ensure that your solution works correctly, you should also create a test suite that verifies the functionality of the API. You can use an automated testing tool like \texttt{Mocha} or \texttt{Jest} to automate this process.
+Your submission should include the following:
+
+\begin{itemize}
+	\item The Dockerfile used to build the Docker image.
+	\item The RESTful API code.
+	\item Documentation on how to run and test the Docker container locally.
+	\item Public URL to the Docker image on Docker Hub.
+\end{itemize}
+
+
+\section*{Grading Criteria}
+
+Your submission will be graded based on the following criteria:
+
+\begin{itemize}
+	\item The correctness of the RESTful API implementation.
+	\item The correctness of the Dockerfile and the resulting Docker image.
+	\item The correctness and completeness of the test suite.
+	\item The clarity and completeness of the documentation.
+\end{itemize}
+
+
+% create a warning message
+\begin{center}
+	\begin{minipage}{0.9\textwidth}
+		\begin{center}
+			\textbf{Warning:} \textcolor{red}{The code you provide will be automatically tested for evaluation. Please make sure your code adheres to the specifications, complete, and works as expected before submitting.}
+		\end{center}
+	\end{minipage}
+\end{center}
+\end{document}
