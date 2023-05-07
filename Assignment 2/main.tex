@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\usepackage{xcolor}
+
+\title{Building a User-Friendly Frontend for a RESTful API with CRUD Operations}
+\date{\textbf{\textcolor{red}{Deadline 14-5-2023, 23:45}}}
+
+\begin{document}
+\maketitle
+
+\section*{Problem Statement}
+You have a RESTful API (from Assignment 1) that performs CRUD operations on a \texttt{person} object, which has the following attributes: \texttt{name}, \texttt{age}, \texttt{id}, \texttt{gender}, and \texttt{email}. You would like to add a frontend to this API that presents the data to users in a user-friendly way.
+Your task is to create a frontend for your RESTful API that meets the following requirements:
+
+\begin{itemize}
+	\item Display a list of all people in the database
+	\item Allow users to add a new person to the database
+	\item Allow users to update an existing person in the database
+	\item Allow users to delete a person from the database
+\end{itemize}
+
+
+\section*{Frontend Requirements}
+The main frontend app requirements can be enumerated as follows:
+
+\begin{enumerate}
+	\item Choose a suitable frontend technology (\textit{e.g.} React, Vue.js, Angular, traditional CSS/JS/HTML, etc.) and prepare a virtual environment or container.
+	\item Create a frontend app that interacts with your RESTful API to retrieve and display data.
+	\item Write code in your frontend app that allows users to add, update, and delete people in the database using your API.
+	\item Create a Dockerfile that describes how to build a Docker image for your frontend app.
+	\item Build a Docker image for your frontend app and run it as a container.
+\end{enumerate}
+
+% Your solution should be well-organized, easy to understand, and properly documented. You should also test your solution thoroughly to ensure that it works correctly and efficiently.
+
+\section*{Docker Image Specifications}
+You should write a Dockerfile that builds a Docker image containing the frontend code and its dependencies. You should then run a container from this Docker image to verify that the frontend app is working correctly. Your submission should include the following:
+
+\begin{itemize}
+\item The Dockerfile used to build the Docker image.
+\item You entire project as a git repository.
+\item A YAML file that specifies the configuration for the Docker container, the RESTful API container, including any environment variables, port mappings, or other settings.
+\end{itemize}
+
+
+The Dockerfile should include the necessary instructions to install any required dependencies, copy the frontend app code to the container, build the app if necessary, and start the app inside the container. The Docker image should be published to Docker Hub or another container registry to make it accessible to others.
+
+% Once the Docker image is built and published, you should provide documentation on how to run and test the Docker container locally. This should include instructions on how to run the container, how to access the running app, and how to test the app functionality.
+
+The YAML file should specify the configuration for the Docker container, including any environment variables, port mappings, or other settings. This file should be included in your submission and should be well-documented to explain the purpose and usage of each configuration setting.
+
+
+\section*{Grading Criteria}
+
+Your submission will be graded based on the following criteria:
+
+\begin{itemize}
+	\item The correctness of the Frontend implementation.
+	\item The correctness of the Dockerfile and the resulting Docker image.
+	\item The correctness and completeness of the YML file.
+	\item The clarity and completeness of the documentation.
+\end{itemize}
+
+
+\end{document}
