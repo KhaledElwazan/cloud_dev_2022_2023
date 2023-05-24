@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  
+  flutter:
+    image: kelwazan/flutter_server
+    ports:
+      - "5000:5000"
+    networks: 
+      mynet:
+        ipv4_address: "172.16.238.11"
+    depends_on: 
+      - restful
+    links: 
+      - restful
+
+  restful:
+    image: kelwazan/restfulapi
+    container_name: restfulapi-container
+    ports: 
+      - "3000:3000"    
+    networks:
+      mynet:
+        ipv4_address: "172.16.238.10"
+    restart: always
+
+
+networks: 
+  mynet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.238.0/24
