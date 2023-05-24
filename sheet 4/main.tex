@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\title{Javascript Continued}
+\author{Sheet 4}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section{Javascript Objects}
+
+\begin{enumerate}
+	\item 	Create an object that represents a person, with properties for their name, age, and address. Use object references to create a second object that represents a family, with properties for the parents and children.
+
+	\item 	Write a function that takes an object as an argument and returns a deep copy of the object, so that any changes made to the copy won't affect the original.
+
+	\item 	Create an object that represents a shopping cart, with properties for the items and their prices. Write a function that calculates the total cost of the items in the cart.
+
+	\item 	Write a function that takes an object as an argument and deletes any properties with a value of null or undefined.
+
+	\item Create an object that represents a book, with properties for the title, author, and publication date. Write a method that returns the number of years since the book was published.
+
+	\item Write a constructor function for a car, with properties for the make, model, and year. Add a method to the prototype that calculates the age of the car.
+
+	\item Write a function that takes an object as an argument and returns a string representation of the object, using the object's properties and values.
+
+	\item 	Create an object that represents a bank account, with properties for the account number, balance, and interest rate. Write a method that calculates the interest earned on the account over a specified period of time.
+
+	\item Write a function that takes an object as an argument and adds a new property to the object, with a value of the current date and time.
+
+	\item Create an object that represents a music playlist, with properties for the songs and their artists. Use optional chaining to access a property of a nested object, and return a default value if the property doesn't exist.
+\end{enumerate}
+
+\section{Object.keys, values, entries}
+\begin{enumerate}
+	\item Write a function that takes an object as input and returns an array containing all keys of the object.
+	\item Write a function that takes an object as input and returns an array containing all values of the object.
+	\item Write a function that takes an object as input and returns an array containing all key-value pairs of the object as arrays.
+	\item Write a function that takes an object and a key as inputs and returns true if the object has the specified key, otherwise false.
+	\item Write a function that takes an object as input and returns the number of keys in the object.
+\end{enumerate}
+
+\section{Strings}
+\begin{enumerate}
+	\item Write a function that takes a string as an input and returns the same string with the first character capitalized.
+
+	\item Write a function that takes a string as an input and returns the same string with all whitespace removed.
+
+	\item Write a function that takes a string as an input and returns the same string with all vowels replaced by '*'.
+
+	\item Write a function that takes a string as an input and returns true if the string is a palindrome (reads the same forwards and backwards), otherwise false.
+\end{enumerate}
+
+\section{Arrays}
+\begin{enumerate}
+	\item Write a function that takes an array of numbers as input and returns the sum of the numbers.
+	\item Write a function that takes an array of strings as input and returns the length of the longest string.
+	\item Write a function that takes an array of numbers as input and returns a new array with all even numbers removed.
+	\item Write a function that takes two arrays as input and returns a new array that contains all elements that are in both arrays.
+	\item Write a function that takes an array of numbers as input and returns a new array with all numbers squared.
+\end{enumerate}
+
+
+\section{Map and Set}
+\begin{enumerate}
+	\item Write a function that takes an array of numbers as input and returns a new array with all duplicates removed.
+	\item Write a function that takes an array of strings as input and returns a new array with all duplicates removed.
+	\item Write a function that takes an array of objects as input and returns a new array with all objects sorted by a specified property (e.g. age).
+	\item Write a function that takes an iterable (e.g. array, string) as input and returns a new set containing all unique elements.
+	\item Write a function that takes two sets as input and returns a new set that contains all elements that are in either set.
+\end{enumerate}
+
+
+
+
+
+\section{Classes}
+\begin{enumerate}
+	\item Create a class called \verb|Person| with a constructor that takes a \verb|name| and \verb|age| parameter. Add a method called \verb|greet| that returns a greeting with the person's name and age. Instantiate a \verb|Person| object and call the \verb|greet| method.
+
+	\item Create a class called \verb|Student| that extends \verb|Person|. Add a constructor that takes a \verb|name|, \verb|age|, and \verb|grade| parameter. Override the \verb|greet| method to include the person's grade in the greeting. Instantiate a \verb|Student| object and call the \verb|greet| method.
+	
+	\item Create a class called \verb|Shape| with a constructor that takes \verb|x| and \verb|y| coordinates. Add a method called \verb|move| that updates the \verb|x| and \verb|y| coordinates. Instantiate a \verb|Shape| object and call the \verb|move| method.
+	
+	\item 	Add a static method to the \verb|Shape| class called \verb|getDistance| that takes two \verb|Shape| objects as parameters and calculates the distance between them using the Pythagorean theorem. Instantiate two \verb|Shape| objects and call the \verb|getDistance| method.
+	
+	\item Create a class called \verb|Rectangle| that extends \verb|Shape|. Add a constructor that takes \verb|x|, \verb|y|, \verb|width|, and \verb|height| parameters. Override the \verb|move| method to update the \verb|x| and \verb|y| coordinates as well as the \verb|x| and \verb|y| coordinates of the opposite corner of the rectangle. Instantiate a \verb|Rectangle| object and call the \verb|move| method.
+	
+	\item Add a static method to the \verb|Rectangle| class called \verb|getArea| that takes a \verb|Rectangle| object as a parameter and calculates its area. Instantiate a \verb|Rectangle| object and call the \verb|getArea| method.
+	
+	\item Create a class called \verb|BankAccount| with a constructor that takes a \verb|name| and \verb|balance| parameter. Add a method called \verb|deposit| that adds an amount to the balance. Add a method called \verb|withdraw| that subtracts an amount from the balance. Create a \verb|checking| and \verb|savings| account and call the \verb|deposit| and \verb|withdraw| methods on each.
+	
+	\item Create a class called \verb|Employee| with private properties called \verb|name| and \verb|salary|. Add a public method called \verb|getSalary| that returns the salary. Instantiate an \verb|Employee| object and call the \verb|getSalary| method.
+	
+	\item Create a class called \verb|Manager| that extends \verb|Employee|. Add a public method called \verb|giveRaise| that increases the salary by a specified amount. Instantiate a \verb|Manager| object and call the \verb|giveRaise| method.
+	
+	\item Create a class called \verb|Animal| with a protected property called \verb|name|. Add a public method called \verb|getName| that returns the name. Instantiate an \verb|Animal| object and call the \verb|getName| method.
+\end{enumerate}
+
+\end{document}
